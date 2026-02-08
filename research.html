@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushan Dutt - Research</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Libre+Franklin:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a1a2e;
+            --color-secondary: #16213e;
+            --color-accent: #0f3460;
+            --color-highlight: #e94560;
+            --color-text: #2d2d2d;
+            --color-text-light: #5a5a5a;
+            --color-bg: #fafafa;
+            --color-border: #e0e0e0;
+            --serif: 'Crimson Pro', serif;
+            --sans: 'Libre Franklin', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans);
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-highlight);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--color-highlight);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 120px;
+            padding-bottom: 4rem;
+        }
+
+        .page-title {
+            font-family: var(--serif);
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 3rem;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 3rem 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        section:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .section-header {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subheader {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin: 2.5rem 0 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        /* Research Intro */
+        .research-intro {
+            font-size: 1.05rem;
+            color: var(--color-text);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        /* Paper Styles */
+        .paper {
+            margin-bottom: 2.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--color-highlight);
+            transition: all 0.3s ease;
+        }
+
+        .paper:hover {
+            border-left-color: var(--color-accent);
+            padding-left: 2rem;
+        }
+
+        .paper-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .paper-authors {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+
+        .paper-authors a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .paper-authors a:hover {
+            text-decoration: underline;
+        }
+
+        .paper-venue {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .paper-links a {
+            color: var(--color-highlight);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid var(--color-highlight);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .paper-links a:hover {
+            background: var(--color-highlight);
+            color: white;
+        }
+
+        .paper-abstract {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-text);
+        }
+
+        .abstract-toggle {
+            color: var(--color-accent);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .abstract-toggle:hover {
+            text-decoration: underline;
+        }
+
+        .paper-abstract.hidden {
+            display: none;
+        }
+
+        /* Simple List Papers */
+        .simple-paper {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .simple-paper::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-highlight);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--color-border);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .section-header {
+                font-size: 1.6rem;
+            }
+
+            .section-subheader {
+                font-size: 1.3rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-primary);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(250, 250, 250, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                border-bottom: 1px solid var(--color-border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Pushan Dutt</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="files/cv.pdf" target="_blank">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Research</h1>
+
+            <!-- Awards -->
+            <section id="awards" style="border-top: none; padding-top: 0;">
+                <h2 class="section-header">Selected Research Awards</h2>
+                
+                <div class="simple-paper">
+                    <strong>Runner-Up Best Paper Award</strong>, Strategic Management Society Conference, Istanbul 2024<br>
+                    <span style="font-style: italic; color: var(--color-text-light);">For "Delay Under Duress? Real Options, Financial Constraints and Firm Responses to the COVID-19 Pandemic"</span>
+                </div>
+
+                <div class="simple-paper">
+                    <strong>Nominated for Best Methods Paper</strong>, Strategic Management Society Conference, Istanbul 2024<br>
+                    <span style="font-style: italic; color: var(--color-text-light);">For "Delay Under Duress? Real Options, Financial Constraints and Firm Responses to the COVID-19 Pandemic"</span>
+                </div>
+
+                <div class="simple-paper">
+                    <strong>Top Cited Article</strong>, Strategic Entrepreneurship Journal, 2022-2023<br>
+                    <span style="font-style: italic; color: var(--color-text-light);">For "Microfinance and Entrepreneurship at the Base of the Pyramid"</span>
+                </div>
+            </section>
+
+            <!-- Publications -->
+            <section id="publications">
+                <h2 class="section-header">Publications</h2>
+
+                <div class="paper">
+                    <div class="paper-title">The Stolper-Samuelson Theorem and Its Applications</div>
+                    <div class="paper-venue">In Elgar Encyclopedia of International Trade, Edward Elgar Publishing, UK, 2025 (forthcoming)</div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Microfinance and Entrepreneurship at the Base of the Pyramid</div>
+                    <div class="paper-authors">with Jasjit Singh and Arzi Adbi</div>
+                    <div class="paper-venue">Strategic Entrepreneurship Journal, 2022, 16(1): 3-31</div>
+                    <div class="paper-links">
+                        <a href="https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/sej.1394" target="_blank">Paper</a>
+                    </div>
+                    <div class="paper-note" style="font-style: italic; color: var(--color-text-light); font-size: 0.9rem; margin-top: 0.3rem;">Lead article; Top Cited Article for papers published in 2022-2023</div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">The Gravity of Experience</div>
+                    <div class="paper-authors">with <a href="http://www.anamariasantacreu.com/" target="_blank">Ana-Maria Santacreu</a> and <a href="https://www2.novasbe.unl.pt/en/faculty-research/faculty/faculty-detail/id/56/daniel-traca" target="_blank">Daniel Traca</a></div>
+                    <div class="paper-venue">Canadian Journal of Economics, 2021, 55(1): 213-248</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper%20CJE%20MS2018057(1).pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Income Distribution and Economic Development: Insights from Machine Learning</div>
+                    <div class="paper-authors">with Ilia Tsetlin</div>
+                    <div class="paper-venue">Economics and Politics, 2021, 33(1): 1-36 [Lead article]</div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">The WTO is Not Passé</div>
+                    <div class="paper-venue">European Economic Review, 2020, 128</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/WTOvPTA_Final.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Democracy and Policy Stability</div>
+                    <div class="paper-authors">with <a href="http://faculty.som.yale.edu/mushfiqmobarak/" target="_blank">Ahmed Mushfiq Mobarak</a></div>
+                    <div class="paper-venue">International Review of Economics & Finance, 2016, 42: 499-517</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Dutt_Mobarak_IREF.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">The Effect of WTO on the Extensive and the Intensive Margins of Trade</div>
+                    <div class="paper-authors">with Ilian Mihov and Timothy Van-Zandt</div>
+                    <div class="paper-venue">Journal of International Economics, 2013, 91(2): 204-219</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper1.pdf" target="_blank">Paper</a>
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/WTO_margins.zip" target="_blank">Data</a>
+                    </div>
+                    <div class="abstract-toggle" onclick="toggleAbstract(this)">Show Abstract ▼</div>
+                    <div class="paper-abstract hidden">
+                        We use 6-digit bilateral trade data to document the effect of WTO/GATT membership on the extensive and intensive product margins of trade. We construct gravity equations for the two product margins motivated by Chaney (2008). The empirical results show that standard gravity variables provide good explanatory power for bilateral trade on both margins. Importantly, we show that the impact of the WTO is concentrated almost exclusively on the extensive product margin of trade, i.e. trade in goods that were not previously traded. In our preferred specification, WTO membership increases the extensive margin of exports by 25%. At the same time, WTO membership has a negative impact on the intensive margin. Based on novel comparative statics results about how fixed and variable trade costs impact the product margins of trade, our results suggest that WTO membership works by reducing primarily the fixed rather than the variable costs of trade.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Stock Market Comovements and Industrial Structure</div>
+                    <div class="paper-authors">with Ilian Mihov</div>
+                    <div class="paper-venue">Journal of Money Credit and Banking, 2013, 45(5): 891-911</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper2.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Crisis and Consumption Smoothing</div>
+                    <div class="paper-authors">with Paddy Padmanabhan</div>
+                    <div class="paper-venue">Marketing Science, 2011, 30(3): 491-512</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper3.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Corruption and Bilateral Trade Flows: Extortion or Evasion</div>
+                    <div class="paper-authors">with <a href="https://www.novasbe.unl.pt/en/faculty-research/faculty/faculty-detail/id/56/daniel-traca" target="_blank">Daniel Traca</a></div>
+                    <div class="paper-venue">Review of Economics and Statistics, 2010, 92(4): 843-860</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper4.pdf" target="_blank">Paper</a>
+                    </div>
+                    <div class="abstract-toggle" onclick="toggleAbstract(this)">Show Abstract ▼</div>
+                    <div class="paper-abstract hidden">
+                        This paper analyzes the impact of corruption on bilateral trade flows, highlighting the dual role of corruption in terms of extortion and evasion. On one hand, corruption taxes trade, when corrupt customs officials in the importing country extort bribes from exporters (the extortion effect); on the other, if tariffs are high, corruption may be trade enhancing, when the corrupt officials allow exporters to evade tariff barriers (the evasion effect). The paper derives and estimates a corruption-augmented gravity model that shows that the effect of corruption on trade flows is ambiguous and is contingent on the level of tariffs. The predictions are borne out in the data: corruption taxes trade in the majority of cases, but in high tariff environments (covering 5-14% of the observations,) its marginal effect is trade-enhancing.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">With Whom Do You Trade? Defensive Innovation and the Skill-bias</div>
+                    <div class="paper-authors">with <a href="https://www.novasbe.unl.pt/en/faculty-research/faculty/faculty-detail/id/56/daniel-traca" target="_blank">Daniel Traca</a></div>
+                    <div class="paper-venue">Canadian Journal of Economics, 2010, 43(4): 1198-1220</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper5.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Impacts of Ideology, Inequality, Lobbying and Public Finance</div>
+                    <div class="paper-authors">with Devashish Mitra</div>
+                    <div class="paper-venue">In Anderson, K. (ed.) The Political Economy of Agricultural Price Distortions, Cambridge University Press, 2010</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper6.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">International Trade and Unemployment: Theory and Cross-National Evidence</div>
+                    <div class="paper-authors">with <a href="https://www.maxwell.syr.edu/directory/devashish-mitra" target="_blank">Devashish Mitra</a> and <a href="https://faculty.sites.uci.edu/prjha/" target="_blank">Priya Ranjan</a></div>
+                    <div class="paper-venue">Journal of International Economics, 2009, 78(1): 32-44</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper7.pdf" target="_blank">Paper</a>
+                    </div>
+                    <div class="abstract-toggle" onclick="toggleAbstract(this)">Show Abstract ▼</div>
+                    <div class="paper-abstract hidden">
+                        In this paper, we present a model of trade and unemployment, in which unemployment is search induced and trade arises as a result of Heckscher-Ohlin (H-O) comparative advantage based on differences in factor proportions and/or Ricardian comparative advantage based on relative technological differences. Using cross-country data on various measures of trade policy, unemployment, and a variety of controls (that include labor-market institutions and macroeconomic distortions), and controlling for endogeneity and measurement error problems, we find fairly strong and robust evidence for the Ricardian prediction that unemployment and trade openness are negatively related (protection and unemployment are positively related). This effect of trade seems to dominate the H-O effect of trade openness on unemployment that changes from negative to positive as we move from labor-abundant to capital-abundant countries. Using panel data, we find support for an unemployment increasing short-run impact effect of trade liberalization, followed by an unemployment reducing effect leading to the new steady state.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Trade Protection and Bureaucratic Corruption: An Empirical Investigation</div>
+                    <div class="paper-venue">Canadian Journal of Economics, 2009, 42(1): 155-183</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper8.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Inequality and the Instability of Polity and Policy</div>
+                    <div class="paper-authors">with <a href="https://www.maxwell.syr.edu/directory/devashish-mitra" target="_blank">Devashish Mitra</a></div>
+                    <div class="paper-venue">Economic Journal, 2008, 118(531): 843-860</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper9.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Labor versus Capital in Trade-Policy: The Role of Ideology and Inequality</div>
+                    <div class="paper-authors">with <a href="https://www.maxwell.syr.edu/directory/devashish-mitra" target="_blank">Devashish Mitra</a></div>
+                    <div class="paper-venue">Journal of International Economics, 2006, 69(2): 310-320</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper10.pdf" target="_blank">Paper</a>
+                        <a href="http://www.nber.org/papers/w10084" target="_blank">NBER Working Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Political Ideology and Endogenous Trade Policies: An Empirical Investigation</div>
+                    <div class="paper-authors">with <a href="https://www.maxwell.syr.edu/directory/devashish-mitra" target="_blank">Devashish Mitra</a></div>
+                    <div class="paper-venue">Review of Economics and Statistics, 2005, 87(1): 59-72</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/Paper11.pdf" target="_blank">Paper</a>
+                        <a href="http://www.nber.org/papers/w9239" target="_blank">NBER Working Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Endogenous Trade Policy through Majority Voting: An Empirical Investigation</div>
+                    <div class="paper-authors">with <a href="https://www.maxwell.syr.edu/directory/devashish-mitra" target="_blank">Devashish Mitra</a></div>
+                    <div class="paper-venue">Journal of International Economics, 2002, 58(1): 107-133</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents//Paper12.pdf" target="_blank">Paper</a>
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/JIE02-DM.zip" target="_blank">Data</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Working Papers -->
+            <section id="working-papers">
+                <h2 class="section-header">Working Papers</h2>
+
+                <div class="paper">
+                    <div class="paper-title">Delay Under Duress? Real Options, Financial Constraints and Firm Responses to the COVID-19 Pandemic</div>
+                    <div class="paper-authors">with Henrich Greve</div>
+                    <div class="paper-note" style="font-style: italic; color: var(--color-text-light); font-size: 0.9rem; margin-top: 0.3rem;">Runner-Up Best Paper Award at Strategic Management Society Conference, Istanbul 2024; Nominated for Best Methods Paper at Strategic Management Society Conference, Istanbul 2024</div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Trade Creation and Trade Diversion Revisited</div>
+                    <div class="paper-authors">with Xuan Luo</div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">The Rise of Chinese Exports: Knowledge Spillovers Within and Across Firm Boundaries</div>
+                    <div class="paper-authors">with Xuan Luo and Lin Tian</div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Trade Diversification and Economic Development</div>
+                    <div class="paper-authors">with Ilian Mihov and Timothy Van-Zandt</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/diversification.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">When Corruption Begets Corruption: Welfare Analysis and the Role of Bureaucratic Wages Under Multiple Equilibria</div>
+                    <div class="paper-links">
+                        <a href="https://www.insead.edu/sites/insead/files/assets/faculty-personal-site/pushan-dutt/documents/corruption_welfare06.pdf" target="_blank">Paper</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Current Research -->
+            <section id="current-research">
+                <h2 class="section-header">Work in Progress</h2>
+
+                <div class="simple-paper">
+                    <strong>Patterns of Export and Production Diversification</strong> (with Ilian Mihov and Timothy Van-Zandt)
+                </div>
+
+                <div class="simple-paper">
+                    <strong>Unhappy Airlines: Heterogeneity in Airline Responses to 9-11, Global Financial Crises, and COVID-19</strong> (with Henrich Greve)
+                </div>
+            </section>
+
+            <!-- Other Publications -->
+            <section id="other">
+                <h2 class="section-header">Other Publications</h2>
+
+                <div class="simple-paper">
+                    Dutt, Pushan and Greve, Henrich. 2025. "Fire Sale? Financial Constraints and Airline Responses to the Covid-19 Pandemic," <em>Academy of Management Proceedings</em>, Volume 2025, No. 1
+                </div>
+
+                <div class="simple-paper">
+                    Singh, Jasjit, Dutt Pushan and Arzi Adbi. "When Does Microfinance Do the Most Good?" <em>Entrepreneur and Innovation Exchange</em>, May 2021
+                </div>
+
+                <div class="simple-paper">
+                    Singh, Jasjit and Dutt, Pushan. 2019. "Microfinance and Entrepreneurship at the Base of the Pyramid," <em>Academy of Management Proceedings</em>, Volume 2019, No. 1
+                </div>
+
+                <div class="simple-paper">
+                    <a href="https://cepr.org/voxeu/columns/does-wto-matter" target="_blank">Does the WTO Matter?</a> on VOX, May 2011
+                </div>
+
+                <div class="simple-paper">
+                    <a href="https://cepr.org/voxeu/columns/corruption-and-its-impact-trade-extortion-or-evasion" target="_blank">Corruption and its impact on trade: Extortion or evasion?</a> on VOX, June 2009
+                </div>
+
+                <div class="simple-paper">
+                    Dutt, Pushan. in Craig Calhoun (Ed.) <em>Dictionary of the Social Sciences</em>. New York: Oxford University Press. (Co-wrote the entries in Economics), September 2001
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Pushan Dutt · Last updated: February 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scrolled class to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Toggle abstract visibility
+        function toggleAbstract(element) {
+            const abstract = element.nextElementSibling;
+            const isHidden = abstract.classList.contains('hidden');
+            
+            if (isHidden) {
+                abstract.classList.remove('hidden');
+                element.textContent = 'Hide Abstract ▲';
+            } else {
+                abstract.classList.add('hidden');
+                element.textContent = 'Show Abstract ▼';
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
