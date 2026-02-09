@@ -183,10 +183,12 @@
             background: white;
             border: 1px solid var(--color-border);
             border-radius: 8px;
-            padding: 1.5rem;
+            overflow: hidden;
             text-decoration: none;
             color: var(--color-text);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .knowledge-card:hover {
@@ -194,11 +196,27 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
 
+        .knowledge-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .knowledge-card-content {
+            padding: 1.5rem;
+        }
+
         .knowledge-card h3 {
             font-family: var(--serif);
             font-size: 1.2rem;
+            margin-bottom: 0.5rem;
             color: var(--color-primary);
-            margin-bottom: 0.75rem;
+        }
+
+        .knowledge-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
         }
 
         .media-item {
@@ -307,28 +325,46 @@
             <h2 class="section-header">INSEAD Knowledge Articles</h2>
             <div class="knowledge-grid">
                 <a href="https://knowledge.insead.edu/economics-finance/fracas-caracas-redrawing-lines" target="_blank" class="knowledge-card">
-                    <h3>Fracas in Caracas: Redrawing the Lines</h3>
-                    <p>As US foreign policy becomes more transactional</p>
+                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-01/us_venezuela.jpg" alt="Fracas in Caracas">
+                    <div class="knowledge-card-content">
+                        <h3>Fracas in Caracas: Redrawing the Lines</h3>
+                        <p>As the United States' advances in Venezuela move us away from rules-based geopolitics, where does the world order stand?</p>
+                    </div>
                 </a>
-                <a href="https://knowledge.insead.edu/blog/insead-blog/the-paradox-of-protectionist-populism-8896" target="_blank" class="knowledge-card">
-                    <h3>The Paradox of Protectionist Populism</h3>
-                    <p>Most Americans support free trade. What accounts for the protectionist rhetoric?</p>
+                <a href="https://knowledge.insead.edu/economics-finance/will-trump-unite-india-and-china" target="_blank" class="knowledge-card">
+                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-08/india-china_ties.jpg" alt="Will Trump Unite India and China">
+                    <div class="knowledge-card-content">
+                        <h3>Will Trump Unite India and China?</h3>
+                        <p>There are no eternal allies or perpetual enemies. Only eternal and perpetual interests.</p>
+                    </div>
                 </a>
-                <a href="https://knowledge.insead.edu/economics-finance/who-suffers-trade-war" target="_blank" class="knowledge-card">
-                    <h3>Who Suffers in a Trade War?</h3>
-                    <p>Risks of a trade war between US and China</p>
+                <a href="https://knowledge.insead.edu/economics-finance/ai-race-through-geopolitical-lens" target="_blank" class="knowledge-card">
+                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-06/ai_race.jpg" alt="The AI Race Through a Geopolitical Lens">
+                    <div class="knowledge-card-content">
+                        <h3>The AI Race Through a Geopolitical Lens</h3>
+                        <p>A new world order is unfolding as the US-China AI race meets geopolitics.</p>
+                    </div>
                 </a>
-                <a href="https://knowledge.insead.edu/blog/insead-blog/understanding-populism-inequality-by-the-numbers-5087" target="_blank" class="knowledge-card">
-                    <h3>Understanding Populism: Inequality by the Numbers</h3>
-                    <p>Rise in populist politicians can be traced to inequality</p>
+                <a href="https://knowledge.insead.edu/economics-finance/singapore-40" target="_blank" class="knowledge-card">
+                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2024-05/shutterstock_1326730706.jpg" alt="Singapore 4.0">
+                    <div class="knowledge-card-content">
+                        <h3>Singapore 4.0</h3>
+                        <p>Amid deglobalisation and geopolitical tensions, what will the future hold for Singapore under new Prime Minister Lawrence Wong?</p>
+                    </div>
                 </a>
-                <a href="https://knowledge.insead.edu/economics-politics/the-death-of-distance-is-greatly-exaggerated-3348" target="_blank" class="knowledge-card">
-                    <h3>The Death of Distance is Greatly Exaggerated!</h3>
-                    <p>Experience in trade matters and can reduce costs</p>
+                <a href="https://knowledge.insead.edu/economics-finance/key-players-indo-pacific-region" target="_blank" class="knowledge-card">
+                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2024-02/shutterstock_488910139_-_copy.jpg" alt="Key Players in the Indo-Pacific Region">
+                    <div class="knowledge-card-content">
+                        <h3>Key Players in the Indo-Pacific Region</h3>
+                        <p>Amid ongoing conflicts, shifting allegiances and incumbents jostling for influence, emerging powers such as India will play an increasingly important role in shaping Indo-Pacific relations.</p>
+                    </div>
                 </a>
-                <a href="https://knowledge.insead.edu/economics-finance/does-democracy-help-or-hinder-growth-4551" target="_blank" class="knowledge-card">
-                    <h3>Does Democracy Help or Hinder Growth?</h3>
-                    <p>Comparing China with democratic India</p>
+                <a href="https://knowledge.insead.edu/economics-finance/thawing-us-china-relations-competition-meets-interdependence" target="_blank" class="knowledge-card">
+                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2023-12/thawus_china_relsp.jpg" alt="Thawing US-China Relations">
+                    <div class="knowledge-card-content">
+                        <h3>Thawing US-China Relations: Competition Meets Interdependence</h3>
+                        <p>What are the biggest wins from the Biden-Xi meeting on the sidelines of the APEC Forum?</p>
+                    </div>
                 </a>
             </div>
 
