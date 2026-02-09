@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushan Dutt - Teaching</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Libre+Franklin:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a1a2e;
+            --color-secondary: #16213e;
+            --color-accent: #0f3460;
+            --color-highlight: #e94560;
+            --color-text: #2d2d2d;
+            --color-text-light: #5a5a5a;
+            --color-bg: #fafafa;
+            --color-border: #e0e0e0;
+            --serif: 'Crimson Pro', serif;
+            --sans: 'Libre Franklin', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans);
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            font-size: 16px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 1000;
+            padding: 1.5rem 0;
+        }
+
+        nav .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--color-highlight);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        main {
+            padding-top: 120px;
+            padding-bottom: 4rem;
+        }
+
+        .page-title {
+            font-family: var(--serif);
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .course-item {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--color-highlight);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 6px;
+        }
+
+        .course-title {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .course-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+
+        .module-item {
+            background: white;
+            border: 1px solid var(--color-border);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 6px;
+        }
+
+        .module-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .module-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-text);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .highlight-box h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2rem;
+            }
+            .section-header {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="nav-brand">Pushan Dutt</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="teaching.html" class="active">Teaching</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="files/cv.pdf" target="_blank">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Teaching</h1>
+            <p class="page-subtitle">MBA, EMBA, and Executive Education courses at INSEAD<br>
+            <span style="font-size: 0.9rem; color: var(--color-highlight);">Best EMBA Elective Teacher Award 2025 • Best EMBA Core Teacher Award 2023 • Teaching Excellence in Executive Education 2024 & 2025</span></p>
+
+            <div style="background: white; border: 1px solid var(--color-border); border-radius: 6px; padding: 2rem; margin-bottom: 3rem;">
+                <h3 style="font-family: var(--serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--color-primary);">Open Enrollment Programs</h3>
+                <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 0.5rem;">I teach in the following INSEAD Executive Education programs:</p>
+                <ul style="margin-left: 1.5rem; line-height: 2;">
+                    <li><a href="https://www.insead.edu/executive-education/general-management/advanced-management-programme" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 500;">Advanced Management Programme</a></li>
+                    <li><a href="https://www.insead.edu/executive-education/general-management/transition-general-management" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 500;">Transition to General Management</a></li>
+                    <li><a href="https://www.insead.edu/executive-education/corporate-governance/crisis-management-boards" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 500;">Crisis Management for Boards</a></li>
+                    <li><a href="https://www.insead.edu/executive-education/top-management/leap-leadership-excellence-awareness-practice" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 500;">LEAP: Leadership Excellence through Awareness and Practice</a></li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Program Direction</h3>
+                <p><strong>Open Enrollment:</strong> <a href="https://www.insead.edu/executive-education/corporate-governance/crisis-management-boards" target="_blank" style="color: white; text-decoration: underline;">Crisis Management for Boards</a> (2025-onwards)</p>
+                <p style="margin-top: 1rem;"><strong>Past Programs:</strong> Asia International Executive Programme (2011-2018); Leading Business Transformation in Asia (2019-2021)</p>
+                <p style="margin-top: 1rem;"><strong>Company Specific Programs:</strong> Deutsche Bank Franchise Leaders Program; INSEAD-ISB PGP Max Program; INSEAD Capital Sovereign Group; Digital Innovation & Sustainability Programme (Sarawak Civil Service); and programs for Jubilant Pharmova, Unilever Indonesia, PwC Asia Pacific, SKF, Economic Development Board Singapore, McKinsey</p>
+            </div>
+
+            <h2 class="section-header">MBA & EMBA Courses</h2>
+
+            <div class="course-item">
+                <div class="course-title">Prices & Markets</div>
+                <div class="course-description">
+                    <p>This course provides the tools and concepts that are relevant to managerial decision making. We touch upon supply and demand; production and costs; pricing strategies; competition between industry participants; strategic decision-making and decision-making under uncertainty.</p>
+                    <p style="margin-top: 1rem;">Economic fundamentals, like demand, cost, market competition, and government policies, are critical to strategic decisions on issues relating to pricing, capacity management, new market entry, exit decisions, to name just a few. The microeconomic concepts and tools have many applications beyond those treated explicitly in the course; we see such applications, for example, in subsequent marketing, strategy, and finance courses.</p>
+                    <p style="margin-top: 1rem;">The primary objective of this course is to provide the basic tools that will be repeatedly applied in subsequent core and elective classes at INSEAD.</p>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <div class="course-title">Strategic Thinking With Game Theory</div>
+                <div class="course-description">
+                    <p>Game Theory offers a systematic approach to strategic decision making that helps in identifying the right alternatives and choosing among them. The biggest win comes from not just understanding the game you are playing and choosing the right strategies, but most importantly, from changing the rules of the game to your advantage.</p>
+                    <p style="margin-top: 1rem;">Given the uncertain, complex, and interconnected worlds that we all inhabit, game theory is a powerful tool for making informed decisions. Game theory is also a language that facilitates deeper dialogue about strategy, and communicating your view of the world, and your rivals' view of the world.</p>
+                    <p style="margin-top: 1rem;">The main objective of this course is to familiarize you with game-theoretic concepts and tools that are critical to formulating more robust business strategies and to becoming better strategic thinkers.</p>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <div class="course-title">Economics and Management in Developing Countries</div>
+                <div class="course-description">
+                    <p>"Economics and Management in Developing Countries" is intended to provide future managers, expecting to work in or with developing countries, with an understanding of their current economic reality and future prospects of these nations. The course concentrates on the relationship between corporate management and the economic and social development of poor countries.</p>
+                    <p style="margin-top: 1rem;"><strong>Part A:</strong> General introduction to the problems of development, and the implications of the international economic and political order.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Part B:</strong> The role that private business and markets can play in promoting economic growth, stressing the activities of foreign investors.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Part C:</strong> The specificities of poverty and the role of the private sector in solving this problem.</p>
+                </div>
+            </div>
+
+            <h2 class="section-header">Executive Education Modules</h2>
+
+            <div class="module-item">
+                <div class="module-title">The Global Landscape: Geopolitical Uncertainty</div>
+                <div class="module-description">
+                    The Great Power Game is afoot. As trade and political tensions increase between China and the US, we are transitioning from a unipolar world to a multi-polar one, from hyper-globalization to deglobalization, from global supply chains to a China plus one strategy. This session examines the Thucydides Trap and how shifts in Great Power dominance are influenced by technological and industrial revolutions, particularly with the rise of AI. We analyze the ASML case and discuss strategies for companies to increase resilience in this new world of great power competition. Bloomberg Economics estimates that a full-fledged conflict over Taiwan could cost $10 trillion, equal to about 10% of global GDP—dwarfing the blow from Ukraine, COVID-19, and the Global Financial Crisis. We cover how firms should make decisions under uncertainty, in a world of unknown unknowns.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">The Global Landscape: Long-Term Growth Opportunities</div>
+                <div class="module-description">
+                    As the world experiences rising protectionism, we observe shifts in both risks and opportunities. While grappling with near-term risks, firms must consider long-term growth opportunities. In 2015, emerging markets produced more goods and services than the world's advanced economies for the first time in over one hundred years—a seismic shift on par with the discovery of the New World. This session builds a framework to understand the rapid transformation of the world economy, examining key drivers of economic growth and evaluating the environment for doing business in emerging economies. We assess experiences of the US, France, Japan, and South Korea, while understanding challenges and opportunities in China, India, Vietnam, and other growth centers.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">The Global Landscape: Volatility and Risks</div>
+                <div class="module-description">
+                    The world has experienced two major crises in short order—the Global Financial Crisis and the COVID-19 pandemic—teaching us about our interconnected world and rapid shock propagation. Meanwhile, profound challenges driven by economics and politics are emerging: war in Europe, worldwide trade wars, US-China technology race, and breakdown of traditional geopolitical alliances. This session focuses on understanding volatility in the global macro environment, using the lens of consumption smoothing to understand crisis impact and recovery. We examine deglobalization, trade wars and the future of global trade, role of monetary and fiscal policies, risks of inflation and debt crises, and the rise of inequality and populism. The goal is to provide an overview of megachallenges facing all economies and companies worldwide.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">Strategic Thinking With Game Theory</div>
+                <div class="module-description">
+                    Firms and individuals rarely make decisions in a vacuum. Instead, we inhabit a world where our actions, payoffs, and opportunities for value creation depend on the actions of others—be they consumers, competitors or complementors. Game Theory offers a systematic approach to strategic decision making that helps in identifying the right alternatives and choosing among them. The biggest win comes from understanding the game you are playing and how you can change the rules of the game to your advantage. We develop the basic tools of game theory and apply them to business examples and short cases, including famous games such as the Prisoner's dilemma and coordination games. Participants make decisions in simulations to understand nuclear races, climate change, price wars, collapse in oil prices, and financial and debt crises. According to the Wall Street Journal: "Game theory helps you pay attention to your interactions with competitors, customers and suppliers, and to focus on the end-game so that your near-term actions promote your long-term interests."
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">Consumer Behavior in a Crisis</div>
+                <div class="module-description">
+                    Understanding how businesses will be impacted in a crisis (currency or banking crisis) requires a fundamental understanding of the impact of the crisis on the consumption decisions of the firm's consumers. Using consumption smoothing as a tool to analyze this issue. Includes a Crisis Simulation Tool designed with Paddy Padmanabhan. Taught to participants from Google, Toshiba, IBM, and Economic Development Board.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">The Rise of China: Challenges Ahead</div>
+                <div class="module-description">
+                    A deep dive into China's economic transformation and future trajectory. Analyzing the challenges facing China's growth model, including demographics, debt dynamics, technology development, and geopolitical tensions. Understanding implications for global supply chains, trade patterns, and business strategy in the Asia-Pacific region.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">The Rise of Inequality</div>
+                <div class="module-description">
+                    Growth of average incomes does not tell us much about how the fruits of growth are distributed. This session defines inequality and initiates a broad discussion on whether we should even care about inequality. Using a data and event driven approach to understand when and how inequality matters, and thinking through the policy tools to tackle inequality and the responsibility of businesses in this domain.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">Doing Business in Risky Countries</div>
+                <div class="module-description">
+                    Analyzing the risks and challenges of doing business in really risky countries such as Chad, Nigeria, Angola. Topics include the natural resource curse, the Dutch Disease, environmental sustainability, and corporate social responsibility. Using project finance to assess and mitigate the risks. Taught to participants from Shell, Petronas, Mubadala, Rio Tinto, McKinsey, and Ernst & Young.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">Singapore's Growth Challenges</div>
+                <div class="module-description">
+                    Singapore has been one of the remarkable growth success stories. But what does the future hold for Singapore and what are the key challenges facing Singapore going forward? This session does a deep dive into Singapore's key competitive advantage and how it can be sustained. Topics include innovation, productivity-driven growth, demographics, health-care costs, immigration, the future of work and inequality.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">Understanding the Great Contraction of 2008-2009</div>
+                <div class="module-description">
+                    A half day module on the financial crisis. Analyzing the buildup in global imbalances and the perverse incentives in the financial and housing sectors to diagnose the great contraction. Also covering the crisis in the Eurozone, the debt dynamics in the US, and the short-term macroeconomic outlook in India and China. Taught in the International Executive Programme.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">FDI Policy</div>
+                <div class="module-description">
+                    A half day module for policymakers interested in attracting and retaining MNCs.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">Corruption</div>
+                <div class="module-description">
+                    Analyzing the causes, consequences and challenges of corruption and how businesses should operate in corrupt environments. Taught in Asian International Executive Programme, Shell, Petronas, and Building the Business: Strategies for Asia-Pacific.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">Microeconomics</div>
+                <div class="module-description">
+                    1 and 2 day modules of core microeconomic tools. These include demand, supply and applications; market entry and exit decisions; using the industry supply curve to understand volatility; pricing strategies especially price discrimination; game theory. Taught to participants from McKinsey and COFRA.
+                </div>
+            </div>
+
+            <h2 class="section-header">PhD Courses (Past)</h2>
+
+            <div class="module-item">
+                <div class="module-title">Microeconomics I</div>
+                <div class="module-description">
+                    Graduate-level microeconomic theory course for PhD students.
+                </div>
+            </div>
+
+            <div class="module-item">
+                <div class="module-title">International Trade</div>
+                <div class="module-description">
+                    Advanced course on international trade theory and empirics for PhD students.
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Pushan Dutt · Last updated: February 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
