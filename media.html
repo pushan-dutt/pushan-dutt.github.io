@@ -20,13 +20,7 @@
             --serif: 'Crimson Pro', serif;
             --sans: 'Libre Franklin', sans-serif;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: var(--sans);
             line-height: 1.7;
@@ -34,7 +28,6 @@
             background-color: var(--color-bg);
             font-size: 16px;
         }
-
         nav {
             position: fixed;
             top: 0;
@@ -45,7 +38,6 @@
             z-index: 1000;
             padding: 1.5rem 0;
         }
-
         nav .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -54,7 +46,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .nav-brand {
             font-family: var(--serif);
             font-size: 1.3rem;
@@ -62,13 +53,11 @@
             color: var(--color-primary);
             text-decoration: none;
         }
-
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
         }
-
         .nav-links a {
             color: var(--color-text);
             text-decoration: none;
@@ -77,23 +66,18 @@
             transition: color 0.3s ease;
             position: relative;
         }
-
-        .nav-links a:hover,
-        .nav-links a.active {
+        .nav-links a:hover, .nav-links a.active {
             color: var(--color-highlight);
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
         main {
             padding-top: 120px;
             padding-bottom: 4rem;
         }
-
         .page-title {
             font-family: var(--serif);
             font-size: 3rem;
@@ -101,13 +85,11 @@
             color: var(--color-primary);
             margin-bottom: 1rem;
         }
-
         .page-subtitle {
             font-size: 1.1rem;
             color: var(--color-text-light);
             margin-bottom: 3rem;
         }
-
         .substack-hero {
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
             border-radius: 12px;
@@ -118,37 +100,31 @@
             grid-template-columns: 2fr 1fr;
             gap: 3rem;
         }
-
         .substack-content h2 {
             font-family: var(--serif);
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-
         .substack-tagline {
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
             font-style: italic;
             opacity: 0.9;
         }
-
         .substack-stats {
             display: flex;
             gap: 2rem;
             margin: 2rem 0;
         }
-
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
             display: block;
         }
-
         .stat-label {
             font-size: 0.9rem;
             opacity: 0.8;
         }
-
         .substack-cta {
             display: inline-block;
             background: var(--color-highlight);
@@ -159,11 +135,9 @@
             font-weight: 600;
             transition: transform 0.3s ease;
         }
-
         .substack-cta:hover {
             transform: translateY(-2px);
         }
-
         .section-header {
             font-family: var(--serif);
             font-size: 2rem;
@@ -171,14 +145,12 @@
             color: var(--color-primary);
             margin: 3rem 0 2rem;
         }
-
         .knowledge-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
-
         .knowledge-card {
             background: white;
             border: 1px solid var(--color-border);
@@ -190,35 +162,29 @@
             display: flex;
             flex-direction: column;
         }
-
         .knowledge-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
-
         .knowledge-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-
         .knowledge-card-content {
             padding: 1.5rem;
         }
-
         .knowledge-card h3 {
             font-family: var(--serif);
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
             color: var(--color-primary);
         }
-
         .knowledge-card p {
             font-size: 0.95rem;
             color: var(--color-text-light);
             line-height: 1.6;
         }
-
         .media-item {
             background: white;
             border: 1px solid var(--color-border);
@@ -228,11 +194,9 @@
             border-radius: 6px;
             transition: all 0.3s ease;
         }
-
         .media-item:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
-
         .media-outlet {
             font-weight: 700;
             color: var(--color-highlight);
@@ -240,21 +204,18 @@
             margin-bottom: 0.5rem;
             text-transform: uppercase;
         }
-
         .media-title {
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--color-primary);
             margin-bottom: 0.5rem;
         }
-
         .media-description {
             font-size: 0.95rem;
             color: var(--color-text);
             margin-bottom: 0.75rem;
             line-height: 1.6;
         }
-
         .media-link {
             display: inline-block;
             color: var(--color-highlight);
@@ -262,11 +223,9 @@
             font-weight: 500;
             margin-top: 0.5rem;
         }
-
         .media-link:hover {
             text-decoration: underline;
         }
-
         footer {
             background: var(--color-primary);
             color: white;
@@ -274,283 +233,308 @@
             text-align: center;
             margin-top: 4rem;
         }
-
         @media (max-width: 768px) {
-            .substack-hero {
-                grid-template-columns: 1fr;
-            }
-            .knowledge-grid {
-                grid-template-columns: 1fr;
-            }
-            .page-title {
-                font-size: 2.2rem;
-            }
+            .substack-hero { grid-template-columns: 1fr; }
+            .knowledge-grid { grid-template-columns: 1fr; }
+            .page-title { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="nav-brand">Pushan Dutt</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="media.html" class="active">Media</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="files/cv.pdf" target="_blank">CV</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <main>
-        <div class="container">
-            <h1 class="page-title">Media & Practitioner Pieces</h1>
-            <p class="page-subtitle">Commentary on economics, trade, and geopolitics</p>
+<nav>
+    <div class="container">
+        <a href="index.html" class="nav-brand">Pushan Dutt</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="media.html" class="active">Media</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="files/cv.pdf" target="_blank">CV</a></li>
+        </ul>
+    </div>
+</nav>
 
-            <div class="substack-hero">
-                <div class="substack-content">
-                    <h2>Pushan's Substack</h2>
-                    <p class="substack-tagline">"From geopolitics to game theory, with a dash of irony and dollops of humor"</p>
-                    <div class="substack-stats">
-                        <div>
-                            <span class="stat-number">1,262</span>
-                            <span class="stat-label">Subscribers</span>
-                        </div>
+<main>
+    <div class="container">
+
+        <h1 class="page-title">Media & Practitioner Pieces</h1>
+        <p class="page-subtitle">Commentary on economics, trade, and geopolitics</p>
+
+        <div class="substack-hero">
+            <div class="substack-content">
+                <h2>Pushan's Substack</h2>
+                <p class="substack-tagline">"From geopolitics to game theory, with a dash of irony and dollops of humor"</p>
+                <div class="substack-stats">
+                    <div>
+                        <span class="stat-number">1,262</span>
+                        <span class="stat-label">Subscribers</span>
                     </div>
-                    <a href="https://pushandutt.substack.com/" target="_blank" class="substack-cta">Visit Substack →</a>
                 </div>
+                <a href="https://pushandutt.substack.com/" target="_blank" class="substack-cta">Visit Substack →</a>
             </div>
+        </div>
 
-            <h2 class="section-header">INSEAD Knowledge Articles</h2>
-            <div class="knowledge-grid">
-                <a href="https://knowledge.insead.edu/economics-finance/fracas-caracas-redrawing-lines" target="_blank" class="knowledge-card">
-                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-01/us_venezuela.jpg" alt="Fracas in Caracas">
-                    <div class="knowledge-card-content">
-                        <h3>Fracas in Caracas: Redrawing the Lines</h3>
-                        <p>As the United States' advances in Venezuela move us away from rules-based geopolitics, where does the world order stand?</p>
-                    </div>
-                </a>
-                <a href="https://knowledge.insead.edu/economics-finance/will-trump-unite-india-and-china" target="_blank" class="knowledge-card">
-                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-08/india-china_ties.jpg" alt="Will Trump Unite India and China">
-                    <div class="knowledge-card-content">
-                        <h3>Will Trump Unite India and China?</h3>
-                        <p>There are no eternal allies or perpetual enemies. Only eternal and perpetual interests.</p>
-                    </div>
-                </a>
-                <a href="https://knowledge.insead.edu/economics-finance/ai-race-through-geopolitical-lens" target="_blank" class="knowledge-card">
-                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-06/ai_race.jpg" alt="The AI Race Through a Geopolitical Lens">
-                    <div class="knowledge-card-content">
-                        <h3>The AI Race Through a Geopolitical Lens</h3>
-                        <p>A new world order is unfolding as the US-China AI race meets geopolitics.</p>
-                    </div>
-                </a>
-                <a href="https://knowledge.insead.edu/economics-finance/singapore-40" target="_blank" class="knowledge-card">
-                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2024-05/shutterstock_1326730706.jpg" alt="Singapore 4.0">
-                    <div class="knowledge-card-content">
-                        <h3>Singapore 4.0</h3>
-                        <p>Amid deglobalisation and geopolitical tensions, what will the future hold for Singapore under new Prime Minister Lawrence Wong?</p>
-                    </div>
-                </a>
-                <a href="https://knowledge.insead.edu/economics-finance/key-players-indo-pacific-region" target="_blank" class="knowledge-card">
-                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2024-02/shutterstock_488910139_-_copy.jpg" alt="Key Players in the Indo-Pacific Region">
-                    <div class="knowledge-card-content">
-                        <h3>Key Players in the Indo-Pacific Region</h3>
-                        <p>Amid ongoing conflicts, shifting allegiances and incumbents jostling for influence, emerging powers such as India will play an increasingly important role in shaping Indo-Pacific relations.</p>
-                    </div>
-                </a>
-                <a href="https://knowledge.insead.edu/economics-finance/thawing-us-china-relations-competition-meets-interdependence" target="_blank" class="knowledge-card">
-                    <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2023-12/thawus_china_relsp.jpg" alt="Thawing US-China Relations">
-                    <div class="knowledge-card-content">
-                        <h3>Thawing US-China Relations: Competition Meets Interdependence</h3>
-                        <p>What are the biggest wins from the Biden-Xi meeting on the sidelines of the APEC Forum?</p>
-                    </div>
-                </a>
-            </div>
+        <h2 class="section-header">INSEAD Knowledge Articles</h2>
+        <div class="knowledge-grid">
 
-            <h2 class="section-header">Television</h2>
+            <a href="https://knowledge.insead.edu/economics-finance/tariffs-and-turmoil-negotiating-new-world-order" target="_blank" class="knowledge-card">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-03/tariffs_turmoil.jpeg" alt="Tariffs and Turmoil">
+                <div class="knowledge-card-content">
+                    <h3>Tariffs and Turmoil: Negotiating the New World Order</h3>
+                    <p>Building slack and adopting a just-in-case approach can help Asian firms address ongoing economic uncertainty.</p>
+                </div>
+            </a>
 
-            <div class="media-item">
-                <div class="media-outlet">Bloomberg</div>
-                <div class="media-title">India Is Turning Trump's Trade Pressure Into Opportunity</div>
-                <p class="media-description">As U.S.-EU tensions reshape global alliances, India faces both risks and rewards. Discussion on why India's protectionist past is giving way to a rush of new trade deals with Europe, the U.K., and beyond. From tariffs and technology transfers to manufacturing reforms.</p>
-                <a href="https://www.youtube.com/watch?v=FeG3he0CyrQ" target="_blank" class="media-link">Watch Video →</a>
-            </div>
+            <a href="https://knowledge.insead.edu/economics-finance/fracas-caracas-redrawing-lines" target="_blank" class="knowledge-card">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-01/us_venezuela.jpg" alt="Fracas in Caracas">
+                <div class="knowledge-card-content">
+                    <h3>Fracas in Caracas: Redrawing the Lines</h3>
+                    <p>As the United States' advances in Venezuela move us away from rules-based geopolitics, where does the world order stand?</p>
+                </div>
+            </a>
 
-            <div class="media-item">
-                <div class="media-outlet">Bloomberg</div>
-                <div class="media-title">Souring US Ties Push India Closer to China</div>
-                <p class="media-description">Indian PM Modi welcomed improved ties with China as US Treasury Secretary escalated criticism of India over purchases of Russian oil. Discussion on the reshaping of geopolitical relations.</p>
-                <a href="https://www.bloomberg.com/news/videos/2025-08-20/souring-us-ties-push-india-closer-to-china-video" target="_blank" class="media-link">Watch Video →</a>
-            </div>
+            <a href="https://knowledge.insead.edu/economics-finance/will-trump-unite-india-and-china" target="_blank" class="knowledge-card">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-08/india-china_ties.jpg" alt="Will Trump Unite India and China">
+                <div class="knowledge-card-content">
+                    <h3>Will Trump Unite India and China?</h3>
+                    <p>There are no eternal allies or perpetual enemies. Only eternal and perpetual interests.</p>
+                </div>
+            </a>
 
-            <div class="media-item">
-                <div class="media-outlet">Bloomberg</div>
-                <div class="media-title">INSEAD's Dutt on Singapore's Economic Future</div>
-                <p class="media-description">Analysis of Singapore's economy as PM Lee Hsien Loong hands over to Deputy Lawrence Wong.</p>
-                <a href="https://www.bloomberg.com/news/videos/2024-05-15/insead-s-dutt-on-singapore-s-economic-future-video" target="_blank" class="media-link">Watch Video →</a>
-            </div>
+            <a href="https://knowledge.insead.edu/economics-finance/ai-race-through-geopolitical-lens" target="_blank" class="knowledge-card">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-06/ai_race.jpg" alt="The AI Race Through a Geopolitical Lens">
+                <div class="knowledge-card-content">
+                    <h3>The AI Race Through a Geopolitical Lens</h3>
+                    <p>A new world order is unfolding as the US-China AI race meets geopolitics.</p>
+                </div>
+            </a>
 
-            <div class="media-item">
-                <div class="media-outlet">CNBC</div>
-                <div class="media-title">Two Ways US-China Trade War Could End</div>
-                <p class="media-description">Analysis of potential resolutions to escalating trade tensions.</p>
-                <a href="https://www.cnbc.com/video/2019/10/10/two-ways-the-us-china-trade-war-could-come-to-an-end.html" target="_blank" class="media-link">Watch Video →</a>
-            </div>
+            <a href="https://knowledge.insead.edu/economics-finance/singapore-40" target="_blank" class="knowledge-card">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2024-05/shutterstock_1326730706.jpg" alt="Singapore 4.0">
+                <div class="knowledge-card-content">
+                    <h3>Singapore 4.0</h3>
+                    <p>Amid deglobalisation and geopolitical tensions, what will the future hold for Singapore under new Prime Minister Lawrence Wong?</p>
+                </div>
+            </a>
 
-            <div class="media-item">
-                <div class="media-outlet">CNBC</div>
-                <div class="media-title">Don't Worry 'At All' About Trump's Tweets</div>
-                <p class="media-description">Trump may be trying to extract concessions through escalatory threats.</p>
-                <a href="https://www.cnbc.com/video/2019/05/06/dont-worry-at-all-about-trumps-tweets-says-professor.html" target="_blank" class="media-link">Watch Video →</a>
-            </div>
+            <a href="https://knowledge.insead.edu/economics-finance/key-players-indo-pacific-region" target="_blank" class="knowledge-card">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2024-02/shutterstock_488910139_-_copy.jpg" alt="Key Players in the Indo-Pacific Region">
+                <div class="knowledge-card-content">
+                    <h3>Key Players in the Indo-Pacific Region</h3>
+                    <p>Amid ongoing conflicts, shifting allegiances and incumbents jostling for influence, emerging powers such as India will play an increasingly important role in shaping Indo-Pacific relations.</p>
+                </div>
+            </a>
 
-            <div class="media-item">
-                <div class="media-outlet">CNBC</div>
-                <div class="media-title">Predicting Minor Concessions from the Chinese</div>
-                <p class="media-description">Discussion on China's likely negotiation strategy with the US.</p>
-                <a href="https://www.cnbc.com/video/2019/02/25/predicting-minor-concessions-from-the-chinese-analyst.html" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">CNBC</div>
-                <div class="media-title">China Could Give Some 'Minor Concessions' in Trade Talks</div>
-                <p class="media-description">It is realistic to expect China to give minor concessions on technology transfer, IP or market access.</p>
-                <a href="https://www.cnbc.com/video/2019/01/06/china-could-give-some-minor-concessions-in-trade-talks-prof.html" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">CNBC</div>
-                <div class="media-title">Hope Something Productive Comes Out of G-20</div>
-                <p class="media-description">Best we can hope for is US and China negotiate in good faith.</p>
-                <a href="https://www.cnbc.com/video/2018/11/30/hope-something-productive-comes-out-of-g-20-analyst.html" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">CNBC</div>
-                <div class="media-title">"Trump is Just Making it Up as He Goes"</div>
-                <p class="media-description">Analysis of unpredictability in US trade policy approach.</p>
-                <a href="https://www.cnbc.com/video/2018/05/31/trump-is-just-making-it-up-as-it-goes-on-policy-professor.html" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">CNBC</div>
-                <div class="media-title">China Could Make Marginal Concessions on Trade</div>
-                <p class="media-description">Discussion on China's trade negotiation strategy.</p>
-                <a href="https://www.cnbc.com/video/2018/05/17/china-could-make-marginal-concessions-on-trade-to-the-us-professor.html" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">CNBC</div>
-                <div class="media-title">Trump Gave 'One of the Biggest Gifts to China'</div>
-                <p class="media-description">By backing out of TPP, Trump backed out on engaging in geopolitics in the region.</p>
-                <a href="https://www.cnbc.com/video/2017/05/21/trump-gave-one-of-the-biggest-gifts-to-china.html" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <h2 class="section-header">Radio</h2>
-
-            <div class="media-item">
-                <div class="media-outlet">Money FM 89.3</div>
-                <div class="media-title">Viewpoint: Is the Global Order Shifting?</div>
-                <p class="media-description">Discussion on Venezuela, US transactional foreign policy, and implications for Asia.</p>
-                <a href="https://omny.fm/shows/moneyfm-afternoon-show/industry-insight-venezuela-and-the-bigger-picture-for-asia" target="_blank" class="media-link">Listen →</a>
-            </div>
-
-            <h2 class="section-header">Op-Eds & Commentary</h2>
-
-            <div class="media-item">
-                <div class="media-outlet">The Conversation</div>
-                <div class="media-title">The Long Road: Singapore as a Case Study</div>
-                <p class="media-description">Singapore's spike in coronavirus cases shows the road to recovery will be a bumpy ride.</p>
-                <a href="https://theconversation.com/singapores-spike-in-coronavirus-cases-shows-the-road-to-recovery-will-be-a-bumpy-ride-136994" target="_blank" class="media-link">Read more →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">The Conversation</div>
-                <div class="media-title">Economic Effects of Coronavirus Lockdowns</div>
-                <p class="media-description">Economic effects are staggering, but health recovery must be prioritized.</p>
-                <a href="https://theconversation.com/economic-effects-of-coronavirus-lockdowns-are-staggering-but-health-recovery-must-be-prioritised-135341" target="_blank" class="media-link">Read more →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">The Conversation</div>
-                <div class="media-title">Japan-South Korea Dispute Threatens Global Supply Chain</div>
-                <p class="media-description">How a century-old dispute threatens the global supply of smartphones.</p>
-                <a href="https://theconversation.com/how-a-century-old-dispute-between-japan-and-south-korea-threatens-the-global-supply-of-smartphones-122502" target="_blank" class="media-link">Read more →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">The Conversation</div>
-                <div class="media-title">The Unproductive Shareholder vs. Stakeholder Debate</div>
-                <p class="media-description">The rise, fall and rise again of businesses serving more than just their shareholders.</p>
-                <a href="https://theconversation.com/the-rise-fall-and-rise-again-of-businesses-serving-more-than-just-their-shareholders-124618" target="_blank" class="media-link">Read more →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">VOX</div>
-                <div class="media-title">Does the WTO Matter?</div>
-                <p class="media-description">WTO boosts trade by reducing uncertainty. Membership raises the range of goods that members export by 42%.</p>
-                <a href="http://voxeu.org/article/does-wto-matter" target="_blank" class="media-link">Read more →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">VOX</div>
-                <div class="media-title">When Corruption Boosts Trade</div>
-                <p class="media-description">When tariffs exceed 25%, the pro-trade effects of corruption may dominate.</p>
-                <a href="http://voxeu.org/article/when-corruption-boosts-trade" target="_blank" class="media-link">Read more →</a>
-            </div>
-
-            <h2 class="section-header">Video & Interviews</h2>
-
-            <div class="media-item">
-                <div class="media-outlet">YouTube / ASEAN Connect</div>
-                <div class="media-title">ASEAN Connect Keynote Address 2017</div>
-                <p class="media-description">The next 50 years for ASEAN.</p>
-                <a href="https://www.youtube.com/watch?v=aCZSs-ZYW0Y" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">YouTube / Channel News Asia</div>
-                <div class="media-title">ASEAN Challenges Q&A Session</div>
-                <p class="media-description">What can countries in ASEAN learn from Singapore?</p>
-                <a href="http://youtu.be/x0R9au_0Lvk" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">INSEAD Knowledge</div>
-                <div class="media-title">Doha Still The Way to Go</div>
-                <p class="media-description">In the absence of Doha agreement, Asia has embarked on a noodle bowl of trade arrangements.</p>
-                <a href="https://www.youtube.com/watch?v=R3YLak3vnBY" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">YouTube</div>
-                <div class="media-title">Marketing in a Downturn - Interview</div>
-                <p class="media-description">In a crisis, pricing is a matter of life and death.</p>
-                <a href="https://youtu.be/QwaQkgkN6TQ" target="_blank" class="media-link">Watch Video →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">Faculti</div>
-                <div class="media-title">WTO vs. Regional Trade Agreements</div>
-                <p class="media-description">The WTO has a bigger impact on bilateral trade in the long-run compared to regional trade agreements.</p>
-                <a href="https://faculti.net/wto-matters-strongly-time-unevenly-across-space/" target="_blank" class="media-link">Read more →</a>
-            </div>
-
-            <div class="media-item">
-                <div class="media-outlet">Faculti</div>
-                <div class="media-title">Democracy and Policy Stability</div>
-                <p class="media-description">What is democracy good for? The unending debate on democracy vs. dictatorship.</p>
-                <a href="https://faculti.net/democracy-policy-stability/" target="_blank" class="media-link">Read more →</a>
-            </div>
+            <a href="https://knowledge.insead.edu/economics-finance/thawing-us-china-relations-competition-meets-interdependence" target="_blank" class="knowledge-card">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2023-12/thawus_china_relsp.jpg" alt="Thawing US-China Relations">
+                <div class="knowledge-card-content">
+                    <h3>Thawing US-China Relations: Competition Meets Interdependence</h3>
+                    <p>What are the biggest wins from the Biden-Xi meeting on the sidelines of the APEC Forum?</p>
+                </div>
+            </a>
 
         </div>
-    </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 Pushan Dutt · Last updated: February 2026</p>
+        <h2 class="section-header">Television</h2>
+
+        <div class="media-item">
+            <div class="media-outlet">Bloomberg</div>
+            <div class="media-title">Why Investors Need To Be Cautious Despite Trump's Optimism</div>
+            <p class="media-description">Analysis of Iran's long conflict horizon, nuclear incentives, and how oil and commodity spikes feed inflation, instability and geopolitical risk.</p>
+            <a href="https://www.youtube.com/watch?v=JYKn-y58wUE&t=1578s" target="_blank" class="media-link">Watch Video →</a>
         </div>
-    </footer>
+
+        <div class="media-item">
+            <div class="media-outlet">Bloomberg</div>
+            <div class="media-title">Modi Hails China Ties As The US Escalates India Criticism</div>
+            <p class="media-description">Discussion on India-China relations as US escalates criticism. Analysis of why China and India are natural partners in the evolving geopolitical landscape, and how a new world order is unfolding as the AI race meets geopolitics.</p>
+            <a href="https://www.youtube.com/watch?v=OrAvvdyv9e0&t=693s" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">Bloomberg</div>
+            <div class="media-title">India Is Turning Trump's Trade Pressure Into Opportunity</div>
+            <p class="media-description">As U.S.-EU tensions reshape global alliances, India faces both risks and rewards. Discussion on why India's protectionist past is giving way to a rush of new trade deals with Europe, the U.K., and beyond. From tariffs and technology transfers to manufacturing reforms.</p>
+            <a href="https://www.youtube.com/watch?v=FeG3he0CyrQ" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">Bloomberg</div>
+            <div class="media-title">Souring US Ties Push India Closer to China</div>
+            <p class="media-description">Indian PM Modi welcomed improved ties with China as US Treasury Secretary escalated criticism of India over purchases of Russian oil. Discussion on the reshaping of geopolitical relations.</p>
+            <a href="https://www.bloomberg.com/news/videos/2025-08-20/souring-us-ties-push-india-closer-to-china-video" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">Bloomberg</div>
+            <div class="media-title">INSEAD's Dutt on Singapore's Economic Future</div>
+            <p class="media-description">Analysis of Singapore's economy as PM Lee Hsien Loong hands over to Deputy Lawrence Wong.</p>
+            <a href="https://www.bloomberg.com/news/videos/2024-05-15/insead-s-dutt-on-singapore-s-economic-future-video" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">CNBC</div>
+            <div class="media-title">Two Ways US-China Trade War Could End</div>
+            <p class="media-description">Analysis of potential resolutions to escalating trade tensions.</p>
+            <a href="https://www.cnbc.com/video/2019/10/10/two-ways-the-us-china-trade-war-could-come-to-an-end.html" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">CNBC</div>
+            <div class="media-title">Don't Worry 'At All' About Trump's Tweets</div>
+            <p class="media-description">Trump may be trying to extract concessions through escalatory threats.</p>
+            <a href="https://www.cnbc.com/video/2019/05/06/dont-worry-at-all-about-trumps-tweets-says-professor.html" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">CNBC</div>
+            <div class="media-title">Predicting Minor Concessions from the Chinese</div>
+            <p class="media-description">Discussion on China's likely negotiation strategy with the US.</p>
+            <a href="https://www.cnbc.com/video/2019/02/25/predicting-minor-concessions-from-the-chinese-analyst.html" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">CNBC</div>
+            <div class="media-title">China Could Give Some 'Minor Concessions' in Trade Talks</div>
+            <p class="media-description">It is realistic to expect China to give minor concessions on technology transfer, IP or market access.</p>
+            <a href="https://www.cnbc.com/video/2019/01/06/china-could-give-some-minor-concessions-in-trade-talks-prof.html" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">CNBC</div>
+            <div class="media-title">Hope Something Productive Comes Out of G-20</div>
+            <p class="media-description">Best we can hope for is US and China negotiate in good faith.</p>
+            <a href="https://www.cnbc.com/video/2018/11/30/hope-something-productive-comes-out-of-g-20-analyst.html" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">CNBC</div>
+            <div class="media-title">"Trump is Just Making it Up as He Goes"</div>
+            <p class="media-description">Analysis of unpredictability in US trade policy approach.</p>
+            <a href="https://www.cnbc.com/video/2018/05/31/trump-is-just-making-it-up-as-it-goes-on-policy-professor.html" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">CNBC</div>
+            <div class="media-title">China Could Make Marginal Concessions on Trade</div>
+            <p class="media-description">Discussion on China's trade negotiation strategy.</p>
+            <a href="https://www.cnbc.com/video/2018/05/17/china-could-make-marginal-concessions-on-trade-to-the-us-professor.html" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">CNBC</div>
+            <div class="media-title">Trump Gave 'One of the Biggest Gifts to China'</div>
+            <p class="media-description">By backing out of TPP, Trump backed out on engaging in geopolitics in the region.</p>
+            <a href="https://www.cnbc.com/video/2017/05/21/trump-gave-one-of-the-biggest-gifts-to-china.html" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <h2 class="section-header">Radio</h2>
+
+        <div class="media-item">
+            <div class="media-outlet">Money FM 89.3</div>
+            <div class="media-title">Viewpoint: Is the Global Order Shifting?</div>
+            <p class="media-description">Discussion on Venezuela, US transactional foreign policy, and implications for Asia.</p>
+            <a href="https://omny.fm/shows/moneyfm-afternoon-show/industry-insight-venezuela-and-the-bigger-picture-for-asia" target="_blank" class="media-link">Listen →</a>
+        </div>
+
+        <h2 class="section-header">Op-Eds & Commentary</h2>
+
+        <div class="media-item">
+            <div class="media-outlet">The Conversation</div>
+            <div class="media-title">The Long Road: Singapore as a Case Study</div>
+            <p class="media-description">Singapore's spike in coronavirus cases shows the road to recovery will be a bumpy ride.</p>
+            <a href="https://theconversation.com/singapores-spike-in-coronavirus-cases-shows-the-road-to-recovery-will-be-a-bumpy-ride-136994" target="_blank" class="media-link">Read more →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">The Conversation</div>
+            <div class="media-title">Economic Effects of Coronavirus Lockdowns</div>
+            <p class="media-description">Economic effects are staggering, but health recovery must be prioritized.</p>
+            <a href="https://theconversation.com/economic-effects-of-coronavirus-lockdowns-are-staggering-but-health-recovery-must-be-prioritised-135341" target="_blank" class="media-link">Read more →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">The Conversation</div>
+            <div class="media-title">Japan-South Korea Dispute Threatens Global Supply Chain</div>
+            <p class="media-description">How a century-old dispute threatens the global supply of smartphones.</p>
+            <a href="https://theconversation.com/how-a-century-old-dispute-between-japan-and-south-korea-threatens-the-global-supply-of-smartphones-122502" target="_blank" class="media-link">Read more →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">The Conversation</div>
+            <div class="media-title">The Unproductive Shareholder vs. Stakeholder Debate</div>
+            <p class="media-description">The rise, fall and rise again of businesses serving more than just their shareholders.</p>
+            <a href="https://theconversation.com/the-rise-fall-and-rise-again-of-businesses-serving-more-than-just-their-shareholders-124618" target="_blank" class="media-link">Read more →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">VOX</div>
+            <div class="media-title">Does the WTO Matter?</div>
+            <p class="media-description">WTO boosts trade by reducing uncertainty. Membership raises the range of goods that members export by 42%.</p>
+            <a href="http://voxeu.org/article/does-wto-matter" target="_blank" class="media-link">Read more →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">VOX</div>
+            <div class="media-title">When Corruption Boosts Trade</div>
+            <p class="media-description">When tariffs exceed 25%, the pro-trade effects of corruption may dominate.</p>
+            <a href="http://voxeu.org/article/when-corruption-boosts-trade" target="_blank" class="media-link">Read more →</a>
+        </div>
+
+        <h2 class="section-header">Video & Interviews</h2>
+
+        <div class="media-item">
+            <div class="media-outlet">YouTube / ASEAN Connect</div>
+            <div class="media-title">ASEAN Connect Keynote Address 2017</div>
+            <p class="media-description">The next 50 years for ASEAN.</p>
+            <a href="https://www.youtube.com/watch?v=aCZSs-ZYW0Y" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">YouTube / Channel News Asia</div>
+            <div class="media-title">ASEAN Challenges Q&A Session</div>
+            <p class="media-description">What can countries in ASEAN learn from Singapore?</p>
+            <a href="http://youtu.be/x0R9au_0Lvk" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">INSEAD Knowledge</div>
+            <div class="media-title">Doha Still The Way to Go</div>
+            <p class="media-description">In the absence of Doha agreement, Asia has embarked on a noodle bowl of trade arrangements.</p>
+            <a href="https://www.youtube.com/watch?v=R3YLak3vnBY" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">YouTube</div>
+            <div class="media-title">Marketing in a Downturn - Interview</div>
+            <p class="media-description">In a crisis, pricing is a matter of life and death.</p>
+            <a href="https://youtu.be/QwaQkgkN6TQ" target="_blank" class="media-link">Watch Video →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">Faculti</div>
+            <div class="media-title">WTO vs. Regional Trade Agreements</div>
+            <p class="media-description">The WTO has a bigger impact on bilateral trade in the long-run compared to regional trade agreements.</p>
+            <a href="https://faculti.net/wto-matters-strongly-time-unevenly-across-space/" target="_blank" class="media-link">Read more →</a>
+        </div>
+
+        <div class="media-item">
+            <div class="media-outlet">Faculti</div>
+            <div class="media-title">Democracy and Policy Stability</div>
+            <p class="media-description">What is democracy good for? The unending debate on democracy vs. dictatorship.</p>
+            <a href="https://faculti.net/democracy-policy-stability/" target="_blank" class="media-link">Read more →</a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Pushan Dutt &middot; Last updated: April 2026</p>
+    </div>
+</footer>
+
 </body>
 </html>
