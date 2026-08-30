@@ -210,6 +210,16 @@
             color: var(--color-primary);
             margin-bottom: 0.5rem;
         }
+        .card-date {
+            display: block;
+            font-weight: 700;
+            color: var(--color-highlight);
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
         .media-archive {
             border-top: 1px solid var(--color-border);
             margin-top: 1.5rem;
@@ -297,52 +307,60 @@
         </div>
 
         <h2 class="section-header">Recent Substack Posts</h2>
+        <div class="knowledge-grid">
 
-        <div class="media-item">
-            <div class="media-outlet">June 2026</div>
-            <div class="media-title">The Costs of Compute</div>
-            <p class="media-description">Datacenters in outer space.</p>
-            <a href="https://pushandutt.substack.com/p/the-costs-of-compute" target="_blank" class="media-link">Read more &rarr;</a>
+            <a href="https://pushandutt.substack.com/p/the-costs-of-compute" target="_blank" class="knowledge-card">
+                <img src="https://substackcdn.com/image/fetch/$s_!JSS2!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2ed4ff52-39b1-4b85-b6bd-0493d2b6f766_1347x781.png" alt="The Costs of Compute" loading="lazy">
+                <div class="knowledge-card-content">
+                    <span class="card-date">June 2026</span>
+                    <h3>The Costs of Compute</h3>
+                    <p>Datacenters in outer space.</p>
+                </div>
+            </a>
+
+            <a href="https://pushandutt.substack.com/p/adventures-in-gemba-flex" target="_blank" class="knowledge-card">
+                <img src="https://substackcdn.com/image/youtube/w_728,c_limit/P9Y_cv2bY9Q" alt="Adventures in GEMBA Flex" loading="lazy">
+                <div class="knowledge-card-content">
+                    <span class="card-date">June 2026</span>
+                    <h3>Adventures in GEMBA Flex</h3>
+                    <p>Wherein I muse for your amusement.</p>
+                </div>
+            </a>
+
+            <a href="https://pushandutt.substack.com/p/how-to-ai" target="_blank" class="knowledge-card">
+                <img src="https://substackcdn.com/image/fetch/$s_!l0UT!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3fc40ed4-1c94-4200-b6e0-054ca776fdc8_1321x609.png" alt="How to AI?" loading="lazy">
+                <div class="knowledge-card-content">
+                    <span class="card-date">May 2026</span>
+                    <h3>How to AI?</h3>
+                    <p>Why your bottleneck matters more than your model.</p>
+                </div>
+            </a>
+
+            <a href="https://pushandutt.substack.com/p/the-asian-trilemma" target="_blank" class="knowledge-card">
+                <img src="https://substackcdn.com/image/fetch/$s_!LYzh!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F020297f5-d201-4760-abce-e07079fd1a3a_3400x2397.png" alt="The Asian Trilemma" loading="lazy">
+                <div class="knowledge-card-content">
+                    <span class="card-date">February 2026</span>
+                    <h3>The Asian Trilemma</h3>
+                    <p>Is the model that built Asia's miracle breaking?</p>
+                </div>
+            </a>
+
+            <a href="https://pushandutt.substack.com/p/imperialism-on-the-cheap" target="_blank" class="knowledge-card">
+                <img src="https://substackcdn.com/image/fetch/$s_!ruMl!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad2a4120-0aff-4647-80a7-d625d1820071_480x417.webp" alt="Imperialism on the Cheap" loading="lazy">
+                <div class="knowledge-card-content">
+                    <span class="card-date">January 2026</span>
+                    <h3>Imperialism on the Cheap</h3>
+                    <p>Surviving the Donroe Doctrine.</p>
+                </div>
+            </a>
+
         </div>
-
-
-        <div class="media-item">
-            <div class="media-outlet">June 2026</div>
-            <div class="media-title">Adventures in GEMBA Flex</div>
-            <p class="media-description">Wherein I muse for your amusement.</p>
-            <a href="https://pushandutt.substack.com/p/adventures-in-gemba-flex" target="_blank" class="media-link">Read more &rarr;</a>
-        </div>
-
-
-        <div class="media-item">
-            <div class="media-outlet">May 2026</div>
-            <div class="media-title">How to AI?</div>
-            <p class="media-description">Why your bottleneck matters more than your model.</p>
-            <a href="https://pushandutt.substack.com/p/how-to-ai" target="_blank" class="media-link">Read more &rarr;</a>
-        </div>
-
-
-        <div class="media-item">
-            <div class="media-outlet">February 2026</div>
-            <div class="media-title">The Asian Trilemma</div>
-            <p class="media-description">Is the model that built Asia's miracle breaking?</p>
-            <a href="https://pushandutt.substack.com/p/the-asian-trilemma" target="_blank" class="media-link">Read more &rarr;</a>
-        </div>
-
-
-        <div class="media-item">
-            <div class="media-outlet">January 2026</div>
-            <div class="media-title">Imperialism on the Cheap</div>
-            <p class="media-description">Surviving the Donroe Doctrine.</p>
-            <a href="https://pushandutt.substack.com/p/imperialism-on-the-cheap" target="_blank" class="media-link">Read more &rarr;</a>
-        </div>
-
 
         <h2 class="section-header">INSEAD Knowledge Articles</h2>
         <div class="knowledge-grid">
 
             <a href="https://knowledge.insead.edu/economics-finance/asian-economic-model-breaking" target="_blank" class="knowledge-card">
-                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-03/shutterstock_2624487499.jpg" alt="Is the Asian Economic Model Breaking?">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-03/shutterstock_2624487499.jpg?itok=Q-T88oew" alt="Is the Asian Economic Model Breaking?">
                 <div class="knowledge-card-content">
                     <h3>Is the Asian Economic Model Breaking?</h3>
                     <p>The Asian miracle was built on an assumption that the system would hold. Given the way things are going, the likelihood is that it won't.</p>
@@ -350,7 +368,7 @@
             </a>
 
             <a href="https://knowledge.insead.edu/economics-finance/tariffs-and-turmoil-negotiating-new-world-order" target="_blank" class="knowledge-card">
-                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-03/tariffs_turmoil.jpeg" alt="Tariffs and Turmoil">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-03/tariffs_turmoil.jpeg?h=9616cb64&amp;itok=ND8docHG&amp;v=ea692ba1d4b9" alt="Tariffs and Turmoil">
                 <div class="knowledge-card-content">
                     <h3>Tariffs and Turmoil: Negotiating the New World Order</h3>
                     <p>Building slack and adopting a just-in-case approach can help Asian firms address ongoing economic uncertainty.</p>
@@ -358,7 +376,7 @@
             </a>
 
             <a href="https://knowledge.insead.edu/economics-finance/fracas-caracas-redrawing-lines" target="_blank" class="knowledge-card">
-                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-01/us_venezuela.jpg" alt="Fracas in Caracas">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-01/us_venezuela.jpg?h=db3417a9&amp;itok=j-lzoFMb&amp;v=dd438474fbf7" alt="Fracas in Caracas">
                 <div class="knowledge-card-content">
                     <h3>Fracas in Caracas: Redrawing the Lines</h3>
                     <p>As the United States' advances in Venezuela move us away from rules-based geopolitics, where does the world order stand?</p>
@@ -366,7 +384,7 @@
             </a>
 
             <a href="https://knowledge.insead.edu/economics-finance/will-trump-unite-india-and-china" target="_blank" class="knowledge-card">
-                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-08/india-china_ties.jpg" alt="Will Trump Unite India and China">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-08/india-china_ties.jpg?h=d83a3960&amp;itok=x7GKGp35&amp;v=c149a98e4736" alt="Will Trump Unite India and China">
                 <div class="knowledge-card-content">
                     <h3>Will Trump Unite India and China?</h3>
                     <p>There are no eternal allies or perpetual enemies. Only eternal and perpetual interests.</p>
@@ -374,7 +392,7 @@
             </a>
 
             <a href="https://knowledge.insead.edu/economics-finance/ai-race-through-geopolitical-lens" target="_blank" class="knowledge-card">
-                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-06/ai_race.jpg" alt="The AI Race Through a Geopolitical Lens">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2025-06/ai_race.jpg?h=562df6f4&amp;itok=zV_3e2UV&amp;v=b6c0b78438bb" alt="The AI Race Through a Geopolitical Lens">
                 <div class="knowledge-card-content">
                     <h3>The AI Race Through a Geopolitical Lens</h3>
                     <p>A new world order is unfolding as the US-China AI race meets geopolitics.</p>
@@ -382,7 +400,7 @@
             </a>
 
             <a href="https://knowledge.insead.edu/economics-finance/singapore-40" target="_blank" class="knowledge-card">
-                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2024-05/shutterstock_1326730706.jpg" alt="Singapore 4.0">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2024-05/shutterstock_1326730706.jpg?itok=LvOffrWO" alt="Singapore 4.0">
                 <div class="knowledge-card-content">
                     <h3>Singapore 4.0</h3>
                     <p>Amid deglobalisation and geopolitical tensions, what will the future hold for Singapore under new Prime Minister Lawrence Wong?</p>
