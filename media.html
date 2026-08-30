@@ -210,6 +210,26 @@
             color: var(--color-primary);
             margin-bottom: 0.5rem;
         }
+        .media-archive {
+            border-top: 1px solid var(--color-border);
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+        }
+        .media-archive > summary {
+            cursor: pointer;
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            padding: 0.5rem 0;
+            list-style: revert;
+        }
+        .media-archive > summary:hover {
+            color: var(--color-highlight);
+        }
+        .media-archive[open] > summary {
+            margin-bottom: 1rem;
+        }
+
         .media-description {
             font-size: 0.95rem;
             color: var(--color-text);
@@ -268,7 +288,7 @@
                 <p class="substack-tagline">"From geopolitics to game theory, with a dash of irony and dollops of humor"</p>
                 <div class="substack-stats">
                     <div>
-                        <span class="stat-number">1,262</span>
+                        <span class="stat-number">1,000+</span>
                         <span class="stat-label">Subscribers</span>
                     </div>
                 </div>
@@ -276,8 +296,58 @@
             </div>
         </div>
 
+        <h2 class="section-header">Recent Substack Posts</h2>
+
+        <div class="media-item">
+            <div class="media-outlet">June 2026</div>
+            <div class="media-title">The Costs of Compute</div>
+            <p class="media-description">Datacenters in outer space.</p>
+            <a href="https://pushandutt.substack.com/p/the-costs-of-compute" target="_blank" class="media-link">Read more &rarr;</a>
+        </div>
+
+
+        <div class="media-item">
+            <div class="media-outlet">June 2026</div>
+            <div class="media-title">Adventures in GEMBA Flex</div>
+            <p class="media-description">Wherein I muse for your amusement.</p>
+            <a href="https://pushandutt.substack.com/p/adventures-in-gemba-flex" target="_blank" class="media-link">Read more &rarr;</a>
+        </div>
+
+
+        <div class="media-item">
+            <div class="media-outlet">May 2026</div>
+            <div class="media-title">How to AI?</div>
+            <p class="media-description">Why your bottleneck matters more than your model.</p>
+            <a href="https://pushandutt.substack.com/p/how-to-ai" target="_blank" class="media-link">Read more &rarr;</a>
+        </div>
+
+
+        <div class="media-item">
+            <div class="media-outlet">February 2026</div>
+            <div class="media-title">The Asian Trilemma</div>
+            <p class="media-description">Is the model that built Asia's miracle breaking?</p>
+            <a href="https://pushandutt.substack.com/p/the-asian-trilemma" target="_blank" class="media-link">Read more &rarr;</a>
+        </div>
+
+
+        <div class="media-item">
+            <div class="media-outlet">January 2026</div>
+            <div class="media-title">Imperialism on the Cheap</div>
+            <p class="media-description">Surviving the Donroe Doctrine.</p>
+            <a href="https://pushandutt.substack.com/p/imperialism-on-the-cheap" target="_blank" class="media-link">Read more &rarr;</a>
+        </div>
+
+
         <h2 class="section-header">INSEAD Knowledge Articles</h2>
         <div class="knowledge-grid">
+
+            <a href="https://knowledge.insead.edu/economics-finance/asian-economic-model-breaking" target="_blank" class="knowledge-card">
+                <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-03/shutterstock_2624487499.jpg" alt="Is the Asian Economic Model Breaking?">
+                <div class="knowledge-card-content">
+                    <h3>Is the Asian Economic Model Breaking?</h3>
+                    <p>The Asian miracle was built on an assumption that the system would hold. Given the way things are going, the likelihood is that it won't.</p>
+                </div>
+            </a>
 
             <a href="https://knowledge.insead.edu/economics-finance/tariffs-and-turmoil-negotiating-new-world-order" target="_blank" class="knowledge-card">
                 <img src="https://knowledge.insead.edu/sites/knowledge/files/styles/384x216/public/2026-03/tariffs_turmoil.jpeg" alt="Tariffs and Turmoil">
@@ -374,6 +444,8 @@
             <a href="https://www.bloomberg.com/news/videos/2024-05-15/insead-s-dutt-on-singapore-s-economic-future-video" target="_blank" class="media-link">Watch Video →</a>
         </div>
 
+        <details class="media-archive">
+            <summary>Earlier CNBC appearances on the US&ndash;China trade war (2017&ndash;2019)</summary>
         <div class="media-item">
             <div class="media-outlet">CNBC</div>
             <div class="media-title">Two Ways US-China Trade War Could End</div>
@@ -429,6 +501,7 @@
             <p class="media-description">By backing out of TPP, Trump backed out on engaging in geopolitics in the region.</p>
             <a href="https://www.cnbc.com/video/2017/05/21/trump-gave-one-of-the-biggest-gifts-to-china.html" target="_blank" class="media-link">Watch Video →</a>
         </div>
+        </details>
 
         <h2 class="section-header">Radio</h2>
 
@@ -532,7 +605,7 @@
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Pushan Dutt &middot; Last updated: April 2026</p>
+        <p>&copy; 2026 Pushan Dutt &middot; Last updated: August 2026</p>
     </div>
 </footer>
 
